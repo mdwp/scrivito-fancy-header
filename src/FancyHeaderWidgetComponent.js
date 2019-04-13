@@ -18,6 +18,14 @@ Scrivito.provideComponent("FancyHeaderWidget", ({ widget }) => {
     sectionClassNames.push("full-height");
   }
 
+  if (!firstTitle.length && Scrivito.isInPlaceEditingActive()) {
+    return (
+        <h4 className="text-center">
+          Provide images with text in the widget properties.
+        </h4>
+    );
+  }
+
   return (
     <div style={{backgroundColor: bg}} className={sectionClassNames.join(" ")}>
 
