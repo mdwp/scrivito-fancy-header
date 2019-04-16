@@ -13,7 +13,7 @@ Open your terminal.
 
 `$ cd` to your Scrivito project
 
-```
+```shell
 $ npm install scrivito-fancy-header
 ```
 
@@ -21,13 +21,13 @@ Import the widget in your javascript (e.g. in `index.js` or `Widgets/index.js`).
 
 Add this line to your index.js:
 
-```
+```js
 import "scrivito-fancy-header";
 ```
 
 Also add the styling of the widget to your app. This can be done by either loading it via `css-loader` (e.g. in `index.js` or `Widgets/index.js`):
 
-```
+```js
 import "scrivito-fancy-header/index.css";
 ```
 
@@ -37,33 +37,13 @@ Or by including the styling to your style sheets (e.g. in `index.scss`):
 @import "~scrivito-fancy-header/index.css";
 ```
 
-## Development
+## Features
 
-With `npm run build` you can build the package into `build/`.
+This widget renders a header with 3 sections, side by side. On mouse over the target section growth to 2/3 of the header width. Works best with full width.
 
-With `npm start` you'll start a continues process, that rebuilds `build/` automatically once the source code is changed.
+## Widget properties
 
-To add this library locally do the following in your scrivito app:
+In the widget properties you can set:
+- 3 section with a title link and an image
 
-```
-npm install file:<path to build folder>
-```
-
-e.g.
-
-```
-npm install file:../scrivito-fancy-header/build/
-```
-
-To publish the package:
-
-```
-npm i && npm run build && cd build/ && npm publish
-```
-
-## Check code quality
-
-With `npm run eslint` and `npm run es-check` you can check your coding quality.
-
-
-
+The link should point to an element of the same page  with an id. For this you can use the widget 'Headline with an anchor id'
